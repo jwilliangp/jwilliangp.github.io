@@ -1,143 +1,210 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>José Willian - Portfolio</title>
+    <title>José Willian - Portfólio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
-<body class="bg-gray-50">
-    <header class="container mx-auto px-4 py-8">
-        <div class="text-center">
-            <h1 class="text-4xl font-bold text-blue-800 mb-2">José Willian de Godoy Pereira</h1>
-            <div class="flex flex-col md:flex-row justify-center gap-4 text-gray-600">
-                <span>📧 jwilliangodoypereira@gmail.com</span>
-                <span>📍 Valinhos, São Paulo</span>
+<body class="bg-gray-50 font-sans">
+    <!-- Header Section -->
+    <header class="bg-blue-800 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold mb-4">José Willian de Godoy Pereira</h1>
+            <p class="text-xl mb-6">Estudante de Análise e Desenvolvimento de Sistemas | Desenvolvedor de Software</p>
+            
+            <!-- Contatos -->
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4 mb-6">
+                <div class="flex items-center">
+                    <i data-feather="map-pin" class="mr-2"></i>
+                    Valinhos/SP
+                </div>
+                <div class="flex items-center">
+                    <i data-feather="mail" class="mr-2"></i>
+                    <span class="cursor-pointer" onclick="copyEmail()">
+                        jwilliangodoypereira@gmail.com
+                    </span>
+                    <span id="copiedMessage" class="text-green-500 text-sm ml-2 hidden">E-mail copiado!</span>
+                </div>
+                
+                <script>
+
+                </script>                              
             </div>
-            <div class="mt-4">
-                <a target="_blank" href="https://www.linkedin.com/in/jwilliangp/" class="text-blue-600 hover:text-blue-800 mx-2">LinkedIn</a>
-                <a target="_blank" href="https://github.com/jwilliangp" class="text-blue-600 hover:text-blue-800 mx-2">GitHub</a>
+
+            <!-- Redes Sociais -->
+            <div class="flex justify-center gap-4">
+                <a href="https://www.linkedin.com/in/jwilliangp/" target="_blank" class="bg-white text-blue-800 px-6 py-2 rounded-full hover:bg-blue-100 transition-colors flex items-center gap-2">
+                    <i data-feather="linkedin" class="w-5 h-5"></i>
+                    LinkedIn
+                </a>
+                <a href="" target="_blank" class="bg-white text-blue-800 px-6 py-2 rounded-full hover:bg-blue-100 transition-colors flex items-center gap-2">
+                    <i data-feather="github" class="w-5 h-5"></i>
+                    GitHub
+                </a>
             </div>
         </div>
     </header>
 
-    <main class="container mx-auto px-4 py-8">
-        <!-- Professional Summary -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-bold text-blue-800 mb-4">Professional Summary</h2>
-            <p class="text-gray-600 leading-relaxed">
-                Systems Analysis and Development student currently in the third semester, 
-                with experience in vulnerability monitoring, web application analysis, 
-                and process automation. Proficient in Python scripting and Java development. 
-                Passionate about software development and cybersecurity.
-            </p>
-        </section>
+    <main class="container mx-auto px-4 py-12">
+        <!-- Certificações -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-blue-800 mb-8 flex items-center">
+                <i data-feather="award" class="mr-3"></i> Certificações
+            </h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Formação Acadêmica -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-lg font-semibold">🎓 Análise e Desenvolvimento de Sistemas</h3>
+                    <p class="text-gray-600 mt-2">Universidade São Francisco • 2024-2026</p>
+                    <p class="mt-2 text-gray-600">Foco em Desenvolvimento de Software, Banco de Dados e Data Science</p>
+                </div>
 
-        <!-- Work Experience -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-bold text-blue-800 mb-4">Work Experience</h2>
-            <div class="bg-white p-6 rounded-lg shadow-md mb-6">
-                <h3 class="text-xl font-semibold">Infrastructure Intern - EMP Sistemas e Serviços</h3>
-                <ul class="list-disc list-inside mt-4 space-y-2 text-gray-600">
-                    <li>Vulnerability monitoring using OWASP ZAP, Nessus, Wazuh</li>
-                    <li>Process automation with Python scripts</li>
-                    <li>Configuration of CIS Controls and security initiatives</li>
-                </ul>
+                <!-- Certificação Cisco -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-lg font-semibold">🔐 Introdução à Cibersegurança</h3>
+                    <p class="text-gray-600 mt-2">Cisco Networking Academy</p>
+                    <p class="mt-2 text-gray-600">Análise de vulnerabilidades em redes, técnicas de proteção e detecção de ameaças</p>
+                </div>
+
+                <!-- Bootcamp Santander -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-lg font-semibold">🛡️ Bootcamp Cybersecurity</h3>
+                    <p class="text-gray-600 mt-2">Santander | DIO</p>
+                    <p class="mt-2 text-gray-600">Engenharia social, técnicas de pentest, análise de redes, mitigação de ransomware e ataques MITM</p>
+                </div>
+
+                <!-- Curso Hardware -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-lg font-semibold">🖥️ Hardware e Redes</h3>
+                    <p class="text-gray-600 mt-2">Microcamp Valinhos</p>
+                    <p class="mt-2 text-gray-600">Manutenção de hardware, configuração de redes e administração de sistemas Linux/Windows</p>
+                </div>
             </div>
         </section>
 
-        <!-- Technical Projects -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-bold text-blue-800 mb-4">Technical Projects</h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="project-card bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold">EcoStock Web Version</h3>
-                    <p class="text-gray-600 my-4">Inventory management web application using Django</p>
-                    <div class="tech-stack flex flex-wrap gap-2">
+        <!-- Projetos -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-blue-800 mb-8 flex items-center">
+                <i data-feather="package" class="mr-3"></i> Projetos em Destaque
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- EcoStock -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">📈 EcoStock Web</h3>
+                    <p class="text-gray-600 mb-4">Sistema de gestão de estoque com:</p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
+                        <li>Autenticação de usuários</li>
+                        <li>CRUD de produtos</li>
+                        <li>Interface com Bootstrap</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Python</span>
                         <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Django</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Bootstrap5</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQLite</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Bootstrap</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">HTML</span>
                     </div>
                 </div>
 
-                <div class="project-card bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold">Ransomware Encryptor</h3>
-                    <p class="text-gray-600 my-4">Educational ransomware implementation</p>
-                    <div class="tech-stack flex flex-wrap gap-2">
+                <!-- Ransomware -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">🔐 Ransomware Educativo</h3>
+                    <p class="text-gray-600 mb-4">Projeto didático para estudo de criptografia:</p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
+                        <li>Implementação de criptografia AES no modo CTR</li>
+                        <li>Geração e manipulação de arquivos de teste</li>
+                        <li>Processamento de arquivos em lote</li>
+                        <li>Descriptografia com remoção do arquivo criptografado</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Python</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">RSA</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">AES</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Criptografia</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Segurança</span>
+                    </div>
+                </div>
+
+                <!-- Inventário -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">🖥️ Inventário de Software</h3>
+                    <p class="text-gray-600 mb-4"> Sistema de inventário de software:</p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
+                        <li>Consumo de dados em JSON via Wazuh RESTful API</li>
+                        <li>Atualização automática de registros</li>
+                        <li>Exportação para Excel</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Python</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Pandas</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">OpenPyXL</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Education & Certifications -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-bold text-blue-800 mb-4">Education & Certifications</h2>
-            <div class="space-y-4">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-lg font-semibold">Analysis and Systems Development</h3>
-                    <p class="text-gray-600">Universidade São Francisco (2024-2026)</p>
+        <!-- Competências Técnicas -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-blue-800 mb-8 flex items-center">
+                <i data-feather="code" class="mr-3"></i> Competências Técnicas
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Programação -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">💻 Programação</h3>
+                    <div class="space-y-2">
+                        <p class="text-gray-600">Python - Automação, Web Scraping, Backend (Django)</p>
+                        <p class="text-gray-600">Java (Spring Boot)</p>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-lg font-semibold">Santander Bootcamp Cybersecurity</h3>
-                    <p class="text-gray-600">DIO - Cybersecurity fundamentals and pentesting</p>
-                </div>
-            </div>
-        </section>
 
-        <!-- Skills -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-bold text-blue-800 mb-4">Technical Skills</h2>
-            <div class="grid md:grid-cols-3 gap-4">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="font-semibold mb-2">Programming</h3>
-                    <ul class="text-gray-600">
-                        <li>Python (Automation, Web Scraping)</li>
-                        <li>Java (Spring Boot)</li>
-                    </ul>
+                <!-- Segurança -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">🔐 Segurança</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full">OWASP ZAP</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full">Tenable Nessus</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full">Wazuh</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full">Metasploit</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full">Nmap</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full">Wireshark</span>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="font-semibold mb-2">Security Tools</h3>
-                    <ul class="text-gray-600">
-                        <li>OWASP ZAP</li>
-                        <li>Nessus</li>
-                        <li>Wazuh</li>
-                    </ul>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="font-semibold mb-2">Other</h3>
-                    <ul class="text-gray-600">
-                        <li>Linux/Windows Administration</li>
-                        <li>Docker</li>
-                        <li>Networking</li>
-                    </ul>
+
+                <!-- Infraestrutura -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">🖥️ Infraestrutura</h3>
+                    <div class="space-y-2">
+                        <p class="text-gray-600">Monitoramento Zabbix</p>
+                        <p class="text-gray-600">Firewall pfSense</p>
+                        <p class="text-gray-600">Suporte de TI</p>
+                        <p class="text-gray-600">Gerenciamento de ativos com NetBox</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-blue-800 text-white py-4">
+    <footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto px-4 text-center">
-            <p>&copy; <span id="currentYear"></span> José Willian. All rights reserved.</p>
+            <p class="mb-4">Busco oportunidades para contribuir com projetos inovadores</p>
+            <p class="text-sm text-gray-400">&copy; <span id="currentYear"></span> José Willian. Todos os direitos reservados.</p>
         </div>
     </footer>
 
     <script>
-        // Dynamic year in footer
+        feather.replace();
         document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        // Add hover effect to project cards
-        document.querySelectorAll('.project-card').forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.style.transform = 'translateY(-5px)';
-                card.style.transition = 'transform 0.3s ease';
+        function copyEmail() {
+            const email = "jwilliangodoypereira@gmail.com";
+            navigator.clipboard.writeText(email).then(() => {
+                const message = document.getElementById("copiedMessage");
+                message.classList.remove("hidden");
+                setTimeout(() => {
+                    message.classList.add("hidden");
+                }, 2000);
             });
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'translateY(0)';
-            });
-        });
+        }
     </script>
 </body>
 </html>
